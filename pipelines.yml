@@ -2,7 +2,7 @@ resources:
   - name: goservice_gitRepo_demo
     type: GitRepo
     configuration:
-      path: eladh/pipeline-webinar-demo
+      path: yairb/pipeline-webinar-demo
       gitProvider: git
 
   - name: svc_build_info_demo
@@ -49,7 +49,7 @@ resources:
     configuration:
       sshKey: deploy_ssh
       targets:
-        - 34.69.49.48
+        - 35.188.99.130 
 
 pipelines:
   - name: service
