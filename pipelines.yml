@@ -23,7 +23,6 @@ resources:
   - name: releaseBundle_demo
     type: ReleaseBundle
     configuration:
-      sourceDistribution: distribution_emea
       name: go-app-bundle
       version: v3.0.0
 
@@ -39,7 +38,7 @@ resources:
     configuration:
       sourceDistribution: distribution_emea
       serviceName: "*"
-      siteName: "England"
+      siteName: "Singapore"
       cityName: "*"
       countryCodes:
         - "*"
