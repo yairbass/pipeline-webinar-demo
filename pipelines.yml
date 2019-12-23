@@ -3,7 +3,7 @@ resources:
     type: GitRepo
     configuration:
       path: yairb/pipeline-webinar-demo
-      gitProvider: git
+      gitProvider: GitHub
 
   - name: svc_build_info_demo
     type: BuildInfo
@@ -64,14 +64,14 @@ pipelines:
           inputResources:
             - name: goservice_gitRepo_demo
           integrations:
-            - name: art
+            - name: artifactory_eu
 
       - name: push_svc_demo
         type: DockerPush
         configuration:
           targetRepository: docker-local
           integrations:
-            - name: art
+            - name: artifactory_eu
           inputSteps:
             - name: bld_svc_demo
 
@@ -88,7 +88,7 @@ pipelines:
         configuration:
           targetRepository: docker-prod-local
           integrations:
-            - name: art
+            - name: artifactory_eu
           inputResources:
             - name: svc_build_info_demo
           outputResources:
@@ -126,7 +126,7 @@ pipelines:
             - name: signedBundle_demo
             - name: distributionRules_demo
           integrations:
-            - name: dist
+            - name: distribution_emea
 
       - name: deploy
         type: Bash
@@ -134,7 +134,7 @@ pipelines:
           environmentVariables:
             artifactory_address: docker.artifactory.yallapipeline.yallapipeline
           integrations:
-            - name: art
+            - name: artifactory_eu
           inputResources:
             - name: deploy_vm_demo
             - name: svc_promoted_build_info_demo
