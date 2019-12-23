@@ -59,7 +59,7 @@ pipelines:
         configuration:
           dockerFileLocation: demo/swampup-go-service
           dockerFileName: Dockerfile
-          dockerImageName: artifactory-eu.soleng-emea.jfrog.team/docker-dev-local/gosvc
+          dockerImageName: docker.artifactory-eu.soleng-emea.jfrog.team/gosvc
           dockerImageTag: $run_number
           inputResources:
             - name: goservice_gitRepo_demo
