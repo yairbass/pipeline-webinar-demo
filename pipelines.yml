@@ -3,7 +3,7 @@ resources:
     type: GitRepo
     configuration:
       path: yairb/pipeline-webinar-demo
-      gitProvider: GitHub
+      gitProvider: myGitHub
 
   - name: svc_build_info_demo
     type: BuildInfo
