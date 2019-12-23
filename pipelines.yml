@@ -2,7 +2,7 @@ resources:
   - name: goservice_gitRepo_demo
     type: GitRepo
     configuration:
-      path: yairb/pipeline-webinar-demo
+      path: yairbass/pipeline-webinar-demo
       gitProvider: GitHub
 
   - name: svc_build_info_demo
