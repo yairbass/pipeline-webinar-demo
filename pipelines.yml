@@ -1,9 +1,9 @@
 resources:
-  - name: YairBassGit
+  - name: goservice_gitRepo_demo
     type: GitRepo
     configuration:
       path: yairbass/pipeline-webinar-demo
-      gitProvider: git
+      gitProvider: YairBassGit
 
   - name: svc_build_info_demo
     type: BuildInfo
@@ -62,7 +62,7 @@ pipelines:
           dockerImageName: docker.artifactory.yallapipeline.yallapipeline/gosvc
           dockerImageTag: $run_number
           inputResources:
-            - name: YairBassGit
+            - name: goservice_gitRepo_demo
           integrations:
             - name: artifactory_eu
 
