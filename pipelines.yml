@@ -132,7 +132,7 @@ pipelines:
         type: Bash
         configuration:
           environmentVariables:
-            artifactory_address: artifactory-eu.soleng-emea.jfrog.team/docker-prod-local
+            artifactory_address: docker.artifactory-eu.soleng-emea.jfrog.team
           integrations:
             - name: artifactory_eu
           inputResources:
