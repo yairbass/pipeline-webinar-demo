@@ -8,14 +8,14 @@ resources:
   - name: svc_build_info_demo
     type: BuildInfo
     configuration:
-      sourceArtifactory: art
+      sourceArtifactory: artifactory_eu	
       buildName: svc_build
       buildNumber: 1
 
   - name: svc_promoted_build_info_demo
     type: BuildInfo
     configuration:
-      sourceArtifactory: art
+      sourceArtifactory: artifactory_eu	
       buildName: svc_build
       buildNumber: 1
 
@@ -23,21 +23,21 @@ resources:
   - name: releaseBundle_demo
     type: ReleaseBundle
     configuration:
-      sourceDistribution: dist
+      sourceDistribution: distribution_emea
       name: go-app-bundle
       version: v3.0.0
 
   - name: signedBundle_demo
     type: ReleaseBundle
     configuration:
-      sourceDistribution: dist
+      sourceDistribution: distribution_emea
       name: go-app-bundle
       version: v3.0.0
 
   - name: distributionRules_demo
     type: DistributionRule
     configuration:
-      sourceDistribution: dist
+      sourceDistribution: distribution_emea
       serviceName: "*"
       siteName: "England"
       cityName: "*"
