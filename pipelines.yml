@@ -69,7 +69,7 @@ pipelines:
       - name: push_svc_demo
         type: DockerPush
         configuration:
-          targetRepository: docker-local
+          targetRepository: docker-dev-local
           integrations:
             - name: artifactory_eu
           inputSteps:
