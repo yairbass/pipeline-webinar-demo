@@ -39,7 +39,7 @@ resources:
     configuration:
       sourceDistribution: distribution_emea
       serviceName: "*"
-      siteName: "Kansas"
+      siteName: "Toulouse"
       cityName: "*"
       countryCodes:
         - "*"
