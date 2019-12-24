@@ -38,8 +38,8 @@ resources:
     type: DistributionRule
     configuration:
       sourceDistribution: distribution_emea
-      serviceName: "*"
-      siteName: "Toulouse"
+      serviceName: "edge1-apac"
+      siteName: "Singapore"
       cityName: "*"
       countryCodes:
         - "*"
