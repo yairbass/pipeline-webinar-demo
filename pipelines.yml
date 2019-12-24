@@ -38,8 +38,8 @@ resources:
     type: DistributionRule
     configuration:
       sourceDistribution: dist
-      serviceName: "edge1-apac"
-      siteName: "*"
+      serviceName: "*"
+      siteName: "Singapore"
       cityName: "*"
       countryCodes:
         - "*"
