@@ -39,7 +39,7 @@ resources:
     configuration:
       sourceDistribution: distribution_emea
       serviceName: "*"
-      siteName: "Toulouse"
+      siteName: "Kansas"
       cityName: "*"
       countryCodes:
         - "*"
@@ -125,9 +125,7 @@ pipelines:
           inputResources:
             - name: signedBundle_demo
             - name: distributionRules_demo
-          integrations:
-            - name: distribution_emea
-
+          
       - name: deploy
         type: Bash
         configuration:
