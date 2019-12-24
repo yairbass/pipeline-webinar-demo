@@ -39,7 +39,7 @@ resources:
     configuration:
       sourceDistribution: dist
       serviceName: "*"
-      siteName: "Singapore"
+      siteName: "Kansas"
       cityName: "*"
       countryCodes:
         - "*"
