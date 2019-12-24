@@ -23,21 +23,21 @@ resources:
   - name: releaseBundle_demo
     type: ReleaseBundle
     configuration:
-      sourceDistribution: distribution_emea
+      sourceDistribution: dist
       name: go-app-bundle
       version: v3.0.0
 
   - name: signedBundle_demo
     type: ReleaseBundle
     configuration:
-      sourceDistribution: distribution_emea
+      sourceDistribution: dist
       name: go-app-bundle
       version: v3.0.0
 
   - name: distributionRules_demo
     type: DistributionRule
     configuration:
-      sourceDistribution: distribution_emea
+      sourceDistribution: dist
       serviceName: "*"
       siteName: "Kansas"
       cityName: "*"
@@ -126,13 +126,13 @@ pipelines:
             - name: signedBundle_demo
             - name: distributionRules_demo
           integrations:
-            - name: distribution_emea
+            - name: dist
           
       - name: deploy
         type: Bash
         configuration:
           environmentVariables:
-            artifactory_address: docker.artifactory-eu.soleng-emea.jfrog.team
+            artifactory_address: artifactory-eu.soleng-emea.jfrog.team
           integrations:
             - name: artifactory_eu
           inputResources:
