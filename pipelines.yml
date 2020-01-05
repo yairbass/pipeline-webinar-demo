@@ -8,7 +8,7 @@ resources:
   - name: svc_build_info_demo
     type: BuildInfo
     configuration:
-      sourceArtifactory: artifactory_eu	
+      sourceArtifactory: art	
       buildName: svc_build
       buildNumber: 1
 
