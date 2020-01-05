@@ -3,7 +3,7 @@ resources:
     type: GitRepo
     configuration:
       path: yairbass/pipeline-webinar-demo
-      gitProvider: YairBassGit
+      gitProvider: yairbgithub
 
   - name: svc_build_info_demo
     type: BuildInfo
@@ -15,7 +15,7 @@ resources:
   - name: svc_promoted_build_info_demo
     type: BuildInfo
     configuration:
-      sourceArtifactory: artifactory_eu	
+      sourceArtifactory: art	
       buildName: svc_build
       buildNumber: 1
 
@@ -64,14 +64,14 @@ pipelines:
           inputResources:
             - name: goservice_gitRepo_demo
           integrations:
-            - name: artifactory_eu
+            - name: art
 
       - name: push_svc_demo
         type: DockerPush
         configuration:
           targetRepository: docker
           integrations:
-            - name: artifactory_eu
+            - name: art
           inputSteps:
             - name: bld_svc_demo
 
@@ -88,7 +88,7 @@ pipelines:
         configuration:
           targetRepository: docker-prod-local
           integrations:
-            - name: artifactory_eu
+            - name: art
           inputResources:
             - name: svc_build_info_demo
           outputResources:
@@ -134,7 +134,7 @@ pipelines:
           environmentVariables:
             artifactory_address: artifactory-eu.soleng-emea.jfrog.team
           integrations:
-            - name: artifactory_eu
+            - name: art
           inputResources:
             - name: deploy_vm_demo
             - name: svc_promoted_build_info_demo
